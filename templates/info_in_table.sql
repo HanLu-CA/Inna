@@ -29,12 +29,12 @@ insert into Regested_User values ('55555','Eva');
 
 insert into Check_Out values ('11111','1-86092-031-4','0001','warehouse','20211207','UPS','Mia');
 
-insert into Address values ('User','ON','Ottawa','30 Southgate rd','K1VT9Y','11111','Amy');
-insert into Address values ('Shipping','ON','Ottawa','60 South rd','K1VK0U','11111','Mia');
-insert into Address values ('User','ON','Ottawa','76 Westgate rd','K1VG8R','22222','Bob');
-insert into Address values ('User','ON','Ottawa','43 Northgate rd','K1VS6E','33333','Chris');
-insert into Address values ('User','ON','Ottawa','25 Eastgate rd','K1VP0V','44444','Dave');
-insert into Address values ('User','ON','Ottawa','90 Greengate rd','K1VX2U','55555','Eva');
+insert into Address values ('User','ON','Ottawa','30 Southgate rd','K1VT9Y','11111');
+insert into Address values ('Shipping','ON','Ottawa','60 South rd','K1VK0U','11111');
+insert into Address values ('User','ON','Ottawa','76 Westgate rd','K1VG8R','22222');
+insert into Address values ('User','ON','Ottawa','43 Northgate rd','K1VS6E','33333');
+insert into Address values ('User','ON','Ottawa','25 Eastgate rd','K1VP0V','44444');
+insert into Address values ('User','ON','Ottawa','90 Greengate rd','K1VX2U','55555');
 
 insert into Publisher values ('Good Publisher','11 GoodPublisher rd, Ottawa, ON, K1V1G1','GoodPublisher@gmail.com','1-613-263-1122','12341234');
 insert into Publisher values ('Nice Publisher','11 NicePublisher rd, Ottawa, ON, K1V2N2','NicePublisher@gmail.com','1-613-263-2233','34563456');
