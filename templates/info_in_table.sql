@@ -8,15 +8,15 @@ delete from User_Book;
 delete from Store_Book;
 
 insert into Store_Book values ('The FiveOrange Pipes','Arthur Conan Doyle','1-86092-031-4','Crime','Good Publisher','14','','','80');
-insert into Store_Book values ('The FiveOrange Hats','Katherine Mansfield','1-86092-038-4','Crime','Nice Publisher','17','','','100');
-insert into Store_Book values ('The FiveOrange Fingers','Ngaio Marsh','1-86092-041-4','Crime','Another Publisher','15','','','50');
+insert into Store_Book values ('The FiveOrange Hats','Katherine Mansfield','1-86092-038-4','Classic','Nice Publisher','17','','','100');
+insert into Store_Book values ('The FiveOrange Fingers','Thomas Hardy','1-86092-041-4','Crime','Another Publisher','15','','','50');
 insert into Store_Book values ('A Chance for Mr Lever','Graham Greene','1-86092-021-7','Classic','Good Publisher','20','','','45');
 insert into Store_Book values ('A Mere Interlude','Thomas Hardy','1-86092-045-4','Romance','New Publisher','22','','','30');
 insert into Store_Book values ('The Dancing Partner: Clocks','Jerome K. Jerome','1-86092-050-0','Comedy','Old Publisher','17','','','70');
 
 insert into User_Book values ('The FiveOrange Pipes','Arthur Conan Doyle','1-86092-031-4','Crime','Good Publisher','300','28');
-insert into User_Book values ('The FiveOrange Hats','Katherine Mansfield','1-86092-038-4','Crime','Nice Publisher','400','34');
-insert into User_Book values ('The FiveOrange Fingers','Ngaio Marsh','1-86092-041-4','Crime','Another Publisher','260','30');
+insert into User_Book values ('The FiveOrange Hats','Katherine Mansfield','1-86092-038-4','Classic','Nice Publisher','400','34');
+insert into User_Book values ('The FiveOrange Fingers','Thomas Hardy','1-86092-041-4','Crime','Another Publisher','260','30');
 insert into User_Book values ('A Chance for Mr Lever','Graham Greene','1-86092-021-7','Classic','Good Publisher','480','40');
 insert into User_Book values ('A Mere Interlude','Thomas Hardy','1-86092-045-4','Romance','New Publisher','700','44');
 insert into User_Book values ('The Dancing Partner: Clocks','Jerome K. Jerome','1-86092-050-0','Comedy','Old Publisher','500','34');
@@ -42,15 +42,14 @@ insert into Publisher values ('Another Publisher','11 AnotherPublisher rd, Ottaw
 insert into Publisher values ('New Publisher','11 NewPublisher rd, Ottawa, ON, K1V4N4','NewPublisher@gmail.com','1-613-263-4455','78907890');
 insert into Publisher values ('Old Publisher','11 OldPublisher rd, Ottawa, ON, K1V5O5','OldPublisher@gmail.com','1-613-263-5566','43214321');
 
-insert into Sales_Expenditures values ('Crime','','3570');
-insert into Sales_Expenditures values ('Classic','','900');
+insert into Sales_Expenditures values ('Crime','','1870');
+insert into Sales_Expenditures values ('Classic','','2600');
 insert into Sales_Expenditures values ('Romance','','660');
 insert into Sales_Expenditures values ('Comedy','','1190');
 insert into Sales_Expenditures values ('Arthur Conan Doyle','','1120');
 insert into Sales_Expenditures values ('Katherine Mansfield','','1700');
-insert into Sales_Expenditures values ('Ngaio Marsh','','750');
 insert into Sales_Expenditures values ('Graham Greene','','900');
-insert into Sales_Expenditures values ('Thomas Hardy','','660');
+insert into Sales_Expenditures values ('Thomas Hardy','','1410');
 insert into Sales_Expenditures values ('Jerome K. Jerome','','1190');
 
 insert into Money_Trans values ('Good Publisher','1-86092-031-4','5');
