@@ -8,15 +8,15 @@ delete from User_Book;
 delete from Store_Book;
 
 insert into Store_Book values ('The FiveOrange Pipes','Arthur Conan Doyle','1-86092-031-4','Crime','Good Publisher','14','','','80');
-insert into Store_Book values ('The FiveOrange Hats','Katherine Mansfield','1-86092-038-4','Classic','Nice Publisher','17','','','100');
-insert into Store_Book values ('The FiveOrange Fingers','Thomas Hardy','1-86092-041-4','Crime','Another Publisher','15','','','50');
+insert into Store_Book values ('The FiveOrange Pipes: Old Version','Katherine Mansfield','1-86092-038-4','Classic','Nice Publisher','17','','','100');
+insert into Store_Book values ('A Chance for Mr Enemy','Thomas Hardy','1-86092-041-4','Crime','Another Publisher','15','','','50');
 insert into Store_Book values ('A Chance for Mr Lever','Graham Greene','1-86092-021-7','Classic','Good Publisher','20','','','45');
 insert into Store_Book values ('A Mere Interlude','Thomas Hardy','1-86092-045-4','Romance','New Publisher','22','','','30');
 insert into Store_Book values ('The Dancing Partner: Clocks','Jerome K. Jerome','1-86092-050-0','Comedy','Old Publisher','17','','','70');
 
 insert into User_Book values ('The FiveOrange Pipes','Arthur Conan Doyle','1-86092-031-4','Crime','Good Publisher','300','28');
-insert into User_Book values ('The FiveOrange Hats','Katherine Mansfield','1-86092-038-4','Classic','Nice Publisher','400','34');
-insert into User_Book values ('The FiveOrange Fingers','Thomas Hardy','1-86092-041-4','Crime','Another Publisher','260','30');
+insert into User_Book values ('The FiveOrange Pipes: Old Version','Katherine Mansfield','1-86092-038-4','Classic','Nice Publisher','400','34');
+insert into User_Book values ('A Chance for Mr Enemy','Thomas Hardy','1-86092-041-4','Crime','Another Publisher','260','30');
 insert into User_Book values ('A Chance for Mr Lever','Graham Greene','1-86092-021-7','Classic','Good Publisher','480','40');
 insert into User_Book values ('A Mere Interlude','Thomas Hardy','1-86092-045-4','Romance','New Publisher','700','44');
 insert into User_Book values ('The Dancing Partner: Clocks','Jerome K. Jerome','1-86092-050-0','Comedy','Old Publisher','500','34');
