@@ -76,6 +76,6 @@ CREATE TABLE Money_Trans(
     ISBN              VARCHAR(25),
     money_percentage  NUMERIC(4,2),
     primary key (money_percentage),
-    foreign key (publisher, ISBN) references Publisher,
+    foreign key (publisher) references Publisher,
     foreign key (ISBN) references Store_Book
 );
