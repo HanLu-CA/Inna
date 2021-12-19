@@ -1,28 +1,28 @@
 create table Store_Book(
-    title             VARCHAR(50),
+    book              VARCHAR(50),
     author            VARCHAR(50),
     ISBN              VARCHAR(25),
     genre             VARCHAR(20),
     publisher         VARCHAR(30),
-    in_price          INT(4),
+    in_price          NUMERIC(4,0),
     sale_time_period  NUMERIC(6,0),
-    num_sold          INT(4),
-    num_hold          INT(4),
-    primary key (title, ISBN, author, genre, publisher, sale_time_period),
+    num_sold          NUMERIC(4,0),
+    num_hold          NUMERIC(4,0),
+    primary key (book, ISBN, author, genre, publisher, sale_time_period),
     foreign key (publisher) references Publisher,
     foreign key (publisher, author, genre) references Sales_Expenditures
 );
 
 CREATE TABLE User_Book(
-    title       VARCHAR(50),
+    book        VARCHAR(50),
     author      VARCHAR(50),
     ISBN        VARCHAR(25),
     genre       VARCHAR(20),
     publisher   VARCHAR(30),
     num_page    NUMERIC(4,0),
-    out_price   INT(4), 
+    out_price   NUMERIC(4,0), 
     primary key (ISBN),
-    foreign key (title, ISBN, author, genre, publisher) references Store_Book
+    foreign key (book, ISBN, author, genre, publisher) references Store_Book
 );
 
 CREATE TABLE Regested_User(
@@ -38,7 +38,7 @@ CREATE TABLE Check_Out(
     curr_order_place   VARCHAR(30),
     date               NUMERIC(8,0),
     shipping_company   VARCHAR(20),
-    receiver            VARCHAR(50),
+    receiver           VARCHAR(50),
     primary key (user_ID, ISBN, order_num),
     foreign key (user_ID) references Regested_User,
     foreign key (ISBN) references User_Book
@@ -66,8 +66,8 @@ CREATE TABLE Publisher(
 
 CREATE TABLE Sales_Expenditures(
     genre_or_author   VARCHAR(20),
-    sales             INT(4),
-    expenditures      INT(4),
+    sales             NUMERIC(4,0),
+    expenditures      NUMERIC(4,0),
     primary key (genre_or_author, sales, expenditures)
 );
 
