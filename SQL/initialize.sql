@@ -21,11 +21,11 @@ insert into User_Book values ('A Chance for Mr Lever','Graham Greene','1-86092-0
 insert into User_Book values ('A Mere Interlude','Thomas Hardy','1-86092-045-4','Romance','New Publisher','700','44');
 insert into User_Book values ('The Dancing Partner: Clocks','Jerome K. Jerome','1-86092-050-0','Comedy','Old Publisher','500','34');
 
-insert into Regested_User values ('11111','Amy');
-insert into Regested_User values ('22222','Bob');
-insert into Regested_User values ('33333','Chris');
-insert into Regested_User values ('44444','Dave');
-insert into Regested_User values ('55555','Eva');
+insert into Regested_User values ('11111','Amy','12345');
+insert into Regested_User values ('22222','Bob','23456');
+insert into Regested_User values ('33333','Chris','34567');
+insert into Regested_User values ('44444','Dave','45678');
+insert into Regested_User values ('55555','Eva','56789');
 
 insert into Check_Out values ('11111','1-86092-031-4','0001','28','1','warehouse','20211207','UPS','Mia');
 
