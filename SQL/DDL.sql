@@ -35,13 +35,14 @@ CREATE TABLE Check_Out(
     user_ID            NUMERIC(4,0),
     ISBN               VARCHAR(25),
     order_num          VARCHAR(20),
+    out_price          NUMERIC(4,0),
     curr_order_place   VARCHAR(30),
     date               NUMERIC(8,0),
     shipping_company   VARCHAR(20),
     receiver           VARCHAR(50),
     primary key (user_ID, ISBN, order_num),
     foreign key (user_ID) references Regested_User,
-    foreign key (ISBN) references User_Book
+    foreign key (ISBN, out_price) references User_Book
 );
 
 CREATE TABLE Address(

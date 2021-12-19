@@ -27,7 +27,7 @@ insert into Regested_User values ('33333','Chris');
 insert into Regested_User values ('44444','Dave');
 insert into Regested_User values ('55555','Eva');
 
-insert into Check_Out values ('11111','1-86092-031-4','0001','warehouse','20211207','UPS','Mia');
+insert into Check_Out values ('11111','1-86092-031-4','0001','28','warehouse','20211207','UPS','Mia');
 
 insert into Address values ('User','ON','Ottawa','30 Southgate rd','K1VT9Y','11111');
 insert into Address values ('Shipping','ON','Ottawa','60 South rd','K1VK0U','11111');
