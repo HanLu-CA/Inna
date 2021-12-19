@@ -28,6 +28,7 @@ CREATE TABLE User_Book(
 CREATE TABLE Regested_User(
     user_ID       NUMERIC(4,0),
     user_name     VARCHAR(50),
+    user_password VARCHAR(20),
     primary key (user_ID)
 );
 
