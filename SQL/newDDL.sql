@@ -43,6 +43,8 @@ CREATE TABLE Car(
     book_num             NUMERIC(4,0),
     sell_price           NUMERIC(4,0),
     primary key (user_ISBN),
+    foreign key (user_ISBN) references Regested_User,
+    foreign key (user_ISBN) references Book,
 )
 
 CREATE TABLE Address(
