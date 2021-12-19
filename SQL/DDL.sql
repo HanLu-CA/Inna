@@ -36,6 +36,7 @@ CREATE TABLE Check_Out(
     ISBN               VARCHAR(25),
     order_num          VARCHAR(20),
     out_price          NUMERIC(4,0),
+    numofbooks         NUMERIC(4,0),
     curr_order_place   VARCHAR(30),
     date               NUMERIC(8,0),
     shipping_company   VARCHAR(20),
