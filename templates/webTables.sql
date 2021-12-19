@@ -1,5 +1,5 @@
 create table Store_Book(
-    title              VARCHAR(50),
+    title             VARCHAR(50),
     author            VARCHAR(50),
     ISBN              VARCHAR(25),
     genre             VARCHAR(20),
@@ -8,13 +8,13 @@ create table Store_Book(
     sale_time_period  NUMERIC(6,0),
     num_sold          INT(4),
     num_hold          INT(4),
-    primary key (book, ISBN, author, genre, publisher, sale_time_period),
+    primary key (title, ISBN, author, genre, publisher, sale_time_period),
     foreign key (publisher) references Publisher,
     foreign key (publisher, author, genre) references Sales_Expenditures
 );
 
 CREATE TABLE User_Book(
-    title        VARCHAR(50),
+    title       VARCHAR(50),
     author      VARCHAR(50),
     ISBN        VARCHAR(25),
     genre       VARCHAR(20),
