@@ -1,5 +1,5 @@
 create table Store_Book(
-    book              VARCHAR(50),
+    title              VARCHAR(50),
     author            VARCHAR(50),
     ISBN              VARCHAR(25),
     genre             VARCHAR(20),
@@ -14,7 +14,7 @@ create table Store_Book(
 );
 
 CREATE TABLE User_Book(
-    book        VARCHAR(50),
+    title        VARCHAR(50),
     author      VARCHAR(50),
     ISBN        VARCHAR(25),
     genre       VARCHAR(20),
@@ -22,7 +22,7 @@ CREATE TABLE User_Book(
     num_page    NUMERIC(4,0),
     out_price   INT(4), 
     primary key (ISBN),
-    foreign key (book, ISBN, author, genre, publisher) references Store_Book
+    foreign key (title, ISBN, author, genre, publisher) references Store_Book
 );
 
 CREATE TABLE Regested_User(
