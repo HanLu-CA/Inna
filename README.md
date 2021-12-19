@@ -7,3 +7,4 @@ dependencies:
   
   pip install flask-wtf
   pip install wtforms
+  pip install flask_bcrypt
