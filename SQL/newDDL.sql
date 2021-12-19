@@ -10,7 +10,8 @@ create table Book(
     introduction      VARCHAR(50),
     page_num          VARCHAR(10),
     primary key (ISBN),
-    foreign key (publisher) references Publisher
+    foreign key (publisher) references Publisher,
+    foreign key (author, genre) references Record
 );
 
 CREATE TABLE Regested_User(
@@ -32,8 +33,8 @@ CREATE TABLE Check_out(
     billing_address    VARCHAR(50),
     primary key (track_num),
     foreign key (user_ID) references Regested_User,
-    foreign key (ISBN) references Book,
-    foreign key (car_ID) references Car
+    foreign key (car_ID) references Car,
+    foreign key (shipping_address, billing_address) references Address
 );
 
 CREATE TABLE Car(
@@ -41,7 +42,7 @@ CREATE TABLE Car(
     car_ID               NUMERIC(4,0),
     book_num             NUMERIC(4,0),
     sell_price           NUMERIC(4,0),
-    primary key (user_ISBN)
+    primary key (user_ISBN),
 )
 
 CREATE TABLE Address(
