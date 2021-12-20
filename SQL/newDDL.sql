@@ -6,8 +6,8 @@ create table Book(
     publisher         VARCHAR(30),
     import_price      NUMERIC(4,0),
     in_stock          NUMERIC(4,0),
-    money_percentage  NUMERIC(4,2),
-    introduction      VARCHAR(50),
+    share_percentage  NUMERIC(4,2),
+    introduction      TEXT(50),
     page_num          VARCHAR(10),
     primary key (ISBN),
     foreign key (publisher) references Publisher,
@@ -37,24 +37,21 @@ CREATE TABLE Check_out(
     foreign key (shipping_address, billing_address) references Address
 );
 
-CREATE TABLE Car(
-    user_ID              NUMERIC(4,0),
+CREATE TABLE Purchase_item(
     ISBN                 VARCHAR(25),
-    car_ID               NUMERIC(4,0),
+    track_num            NUMERIC(4,0),
     book_num             NUMERIC(4,0),
     sell_price           NUMERIC(4,0),
-    primary key (user_ID,ISBN),
-    foreign key (user_ID) references Regested_User,
+    primary key (ISBN),
+    foreign key (track_num) references Regested_User,
     foreign key (ISBN) references Book,
 )
 
 CREATE TABLE Address(
     address_ID    VARCHAR(10),
     ZIP_code        VARCHAR(6),
-    user_ID         NUMERIC(4,0),
     street_address  VARCHAR(50),
     primary key (address_ID),
-    foreign key (user_ID) references Regested_User,
     foreign key (ZIP_code) references Postcode
 );
 
@@ -74,10 +71,9 @@ CREATE TABLE Publisher(
     primary key (publisher)
 );
 
-CREATE TABLE Record(
-    record_ID         VARCHAR(4,0),
-    genre_or_author   VARCHAR(20),
-    money             NUMERIC(4,0),
-    type              BOOLEAN,
-    primary key (record_ID, genre_or_author)
+CREATE TABLE Sale_expense(
+    sale_ID           VARCHAR(4,0),
+    amount            NUMERIC(4,0),
+    date              DATE,
+    primary key (sale_ID)
 );

@@ -1,8 +1,8 @@
-delete from Record;
+delete from Sale_expense;
 delete from Publisher;
 delete from Postcode;
 delete from Address;
-delete from Car;
+delete from Purchase_item;
 delete from Check_Out;
 delete from Regested_User;
 delete from Book;
