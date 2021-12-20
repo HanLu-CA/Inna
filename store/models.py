@@ -1,3 +1,4 @@
+from sqlalchemy.orm import backref
 from store import db, login_manager
 from store import bcrypt
 from flask_login import UserMixin
@@ -31,23 +32,25 @@ class Publisher(db.Model):
   email = db.Column(db.String(length=30), nullable=False, unique=True)
   phone = db.Column(db.Integer(), nullable=False)
   banking_accout = db.Column(db.String(length=30), nullable=False, unique=True)
+  book = db.relationship('Book', backref='publisher', lazy=True)
  
-# class Book(db.Model):
-#   isbn = db.Column(db.Integer(), primary_key=True)
-#   title = db.Column(db.String(length=30), nullable=False, unique=True)
-#   genre = db.Column(db.String(length=30), nullable=False)
-#   author = db.Column(db.String(length=30), nullable=False)
-#   pub_name = db.Column(db.String(length=30), db.ForeignKey('Publisher.name'))
-#   pages = db.Column(db.Integer(), nullable=False)
-#   import_price = db.Column(db.Integer(), nullable=False)
-#   sell_price = db.Column(db.Integer(), nullable=False)
-#   stock = db.Column(db.Integer(), nullable=False)
-#   description = db.Column(db.String(length=1024), nullable=False, unique=True)
+class Book(db.Model):
+  isbn = db.Column(db.Integer(), primary_key=True)
+  title = db.Column(db.String(length=30), nullable=False)
+  genre = db.Column(db.String(length=30), nullable=False)
+  author = db.Column(db.String(length=30), nullable=False)
+  publisher_name = db.Column(db.String(length=30), db.ForeignKey('publisher.name'))
+  pages = db.Column(db.Integer(), nullable=False)
+  import_price = db.Column(db.Integer(), nullable=False)
+  sell_price = db.Column(db.Integer(), nullable=False)
+  stock = db.Column(db.Integer(), nullable=False)
+  description = db.Column(db.String(length=1024), nullable=False, unique=True)
   
 class Item(db.Model):
-  cart_id = db.Column(db.Integer(), primary_key=True)
-  isbn = db.Column(db.Integer())
+  track_num = db.Column(db.Integer(), primary_key=True)
+  isbn = db.Column(db.Integer(), primary_key=True)
   quantity = db.Column(db.Integer(), nullable=False)
+  date = db.Column(db.Date(), nullable=False)
   
 # class Cart(db.Model):
 #   cart_id = db.Column(db.Integer(), primary_key=True)
