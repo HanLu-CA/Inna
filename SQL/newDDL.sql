@@ -25,7 +25,7 @@ CREATE TABLE Regested_User(
 CREATE TABLE Check_out(
     track_num          NUMERIC(4,0),
     user_ID            NUMERIC(4,0),
-    cart_ID             NUMERIC(4,0),
+    car_ID             NUMERIC(4,0),
     curr_order_place   VARCHAR(30),
     date_buy           NUMERIC(8,0),
     shipping_company   VARCHAR(20),
@@ -33,18 +33,19 @@ CREATE TABLE Check_out(
     billing_address    VARCHAR(50),
     primary key (track_num),
     foreign key (user_ID) references Regested_User,
-    foreign key (car_ID) references Cart,
+    foreign key (car_ID) references Car,
     foreign key (shipping_address, billing_address) references Address
 );
 
-CREATE TABLE Cart(
-    user_ISBN            VARCHAR(30),
-    cart_ID               NUMERIC(4,0),
+CREATE TABLE Car(
+    user_ID              NUMERIC(4,0),
+    ISBN                 VARCHAR(25),
+    car_ID               NUMERIC(4,0),
     book_num             NUMERIC(4,0),
     sell_price           NUMERIC(4,0),
-    primary key (user_ISBN),
-    foreign key (user_ISBN) references Regested_User,
-    foreign key (user_ISBN) references Book,
+    primary key (user_ID,ISBN),
+    foreign key (user_ID) references Regested_User,
+    foreign key (ISBN) references Book,
 )
 
 CREATE TABLE Address(
