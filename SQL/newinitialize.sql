@@ -7,12 +7,12 @@ delete from Check_Out;
 delete from Regested_User;
 delete from Book;
 
-insert into Store_Book values ('1-86092-031-4','The FiveOrange Pipes','Arthur Conan Doyle','Crime','Good Publisher','14','80','5','asdfghjkl','556');
-insert into Store_Book values ('1-86092-038-4','The FiveOrange Pipes: Old Version','Katherine Mansfield','Classic','Nice Publisher','17','70','6','ertyuio','877');
-insert into Store_Book values ('1-86092-041-4','A Chance for Mr Enemy','Thomas Hardy','Crime','Another Publisher','15','100','7','jhgfd','334');
-insert into Store_Book values ('1-86092-021-7','A Chance for Mr Lever','Graham Greene','Classic','Good Publisher','20','30','8','uytrrew','567');
-insert into Store_Book values ('1-86092-045-4','A Mere Interlude','Thomas Hardy','Romance','New Publisher','22','40','9','mnbvcx','765');
-insert into Store_Book values ('1-86092-050-0','The Dancing Partner: Clocks','Jerome K. Jerome','Comedy','Old Publisher','17','60','10','zxcvb','234');
+insert into Store_Book values ('1-86092-031-4','The FiveOrange Pipes','Arthur Conan Doyle','Crime','Good Publisher','14','28','80','5','asdfghjkl','556');
+insert into Store_Book values ('1-86092-038-4','The FiveOrange Pipes: Old Version','Katherine Mansfield','Classic','Nice Publisher','17','34','70','6','ertyuio','877');
+insert into Store_Book values ('1-86092-041-4','A Chance for Mr Enemy','Thomas Hardy','Crime','Another Publisher','15','30','100','7','jhgfd','334');
+insert into Store_Book values ('1-86092-021-7','A Chance for Mr Lever','Graham Greene','Classic','Good Publisher','20','40','30','8','uytrrew','567');
+insert into Store_Book values ('1-86092-045-4','A Mere Interlude','Thomas Hardy','Romance','New Publisher','22','44','40','9','mnbvcx','765');
+insert into Store_Book values ('1-86092-050-0','The Dancing Partner: Clocks','Jerome K. Jerome','Comedy','Old Publisher','17','34','60','10','zxcvb','234');
 
 insert into Regested_User values ('11111','Amy','12345','0');
 insert into Regested_User values ('22222','Bob','23456','0');

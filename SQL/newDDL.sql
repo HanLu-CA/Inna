@@ -5,13 +5,13 @@ create table Book(
     genre             VARCHAR(20),
     publisher         VARCHAR(30),
     import_price      NUMERIC(4,0),
+    retail_price      NUMERIC(4,0),
     in_stock          NUMERIC(4,0),
     share_percentage  NUMERIC(4,2),
     introduction      TEXT(50),
     page_num          VARCHAR(10),
     primary key (ISBN),
-    foreign key (publisher) references Publisher,
-    foreign key (author, genre) references Record
+    foreign key (publisher) references Publisher
 );
 
 CREATE TABLE Regested_User(
@@ -25,15 +25,12 @@ CREATE TABLE Regested_User(
 CREATE TABLE Check_out(
     track_num          NUMERIC(4,0),
     user_ID            NUMERIC(4,0),
-    car_ID             NUMERIC(4,0),
     curr_order_place   VARCHAR(30),
-    date_buy           NUMERIC(8,0),
     shipping_company   VARCHAR(20),
     shipping_address   VARCHAR(50),
     billing_address    VARCHAR(50),
     primary key (track_num),
     foreign key (user_ID) references Regested_User,
-    foreign key (car_ID) references Car,
     foreign key (shipping_address, billing_address) references Address
 );
 
@@ -43,7 +40,7 @@ CREATE TABLE Purchase_item(
     book_num             NUMERIC(4,0),
     sell_price           NUMERIC(4,0),
     primary key (ISBN),
-    foreign key (track_num) references Regested_User,
+    foreign key (track_num) references Check_out,
     foreign key (ISBN) references Book,
 )
 
