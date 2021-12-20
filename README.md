@@ -10,3 +10,7 @@ dependencies:
   pip install wtforms
   pip install flask_bcrypt
   pip install flask_login
+  
+  
+  usage:
+    python3 run.py
