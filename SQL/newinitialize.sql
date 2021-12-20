@@ -1,4 +1,4 @@
-delete from Sale_expense;
+delete from Expense;
 delete from Publisher;
 delete from Postcode;
 delete from Address;

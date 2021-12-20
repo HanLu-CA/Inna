@@ -38,7 +38,7 @@ CREATE TABLE Purchase_item(
     ISBN                 VARCHAR(25),
     track_num            NUMERIC(4,0),
     book_num             NUMERIC(4,0),
-    sell_price           NUMERIC(4,0),
+    date                 DATE,
     primary key (ISBN),
     foreign key (track_num) references Check_out,
     foreign key (ISBN) references Book,
@@ -68,8 +68,8 @@ CREATE TABLE Publisher(
     primary key (publisher)
 );
 
-CREATE TABLE Sale_expense(
-    sale_ID           VARCHAR(4,0),
+CREATE TABLE Expense(
+    ID                VARCHAR(4,0),
     amount            NUMERIC(4,0),
     date              DATE,
     primary key (sale_ID)
